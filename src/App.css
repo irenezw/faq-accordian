@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: var(--light-pink);
+  background-image: url('../public/assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+
+
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+.container {
   padding: 2em;
+  background-color: var(--white);
+  border-radius: 1em;
+  max-width: 650px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.read-the-docs {
-  color: #888;
+.wrapper {
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+
+
+.wrapper .question-container {
+  width: 100%;
+  text-align: left;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.question-container.active {
+  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
+
+}
+.wrapper .question-container:hover {
+  background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
+}
+
+.wrapper .arrow {
+  font-size: 2rem;
+  transition: .5s ease-in-out;
+}
+
+.iconPlus.active {
+  rotate: 180deg;
+  color: #1db954;
+}
+
+.wrapper .answer-container {
+  padding: 0 1rem;
+  transition: height .7s ease-in-out;
+}
+
+.wrapper .answer-content {
+  color: var(--grayish-purple);
+  padding: 1rem 0;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  h1 {
+    margin: 0em .5em 0em ;
+    font-size: 300%;
+  }
 }
